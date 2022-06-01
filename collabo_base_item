@@ -24,7 +24,7 @@ def kdd_distance(data, n1, n2):
     sum=0
     #두 사용자가 모두 본 영화를 기준 i
     for i in data.loc[n1,data.loc[n1,:] >= 0].index:
-         if data.loc[n2,i] > =0:
+         if data.loc[n2,i] >= 0 :
             sum += pow(data.loc[n1,i] - data.loc[n2,i], 2) 
     return sqrt(1 / (sum + 1) ) #유사도 형식으로 출력 
 
